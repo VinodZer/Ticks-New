@@ -123,4 +123,21 @@ body {
     text-overflow: ellipsis;
     overflow: hidden;
   }
+  
+  /* Force primary tabs to be visible */
+  [data-radix-tabs-list] {
+    min-height: 40px;
+    display: flex !important;
+  }
+  
+  /* Ensure tab triggers have minimum touch targets */
+  [data-radix-tabs-trigger] {
+    min-width: 60px;
+    min-height: 36px;
+    padding: 8px 12px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

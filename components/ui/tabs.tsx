@@ -61,6 +61,11 @@ const TabsList = React.forwardRef<
       {/* ---------- Mobile (< sm) ---------- */}
       <div className="space-y-2 sm:hidden">
         {/* Primary row */}
+        <TabsPrimitive.List
+          className="flex items-center justify-center gap-1 rounded-md p-1 text-muted-foreground bg-white border border-gray-200"
+        >
+          {primaryTabs}
+        </TabsPrimitive.List>
 
         {/* Secondary (scrollable) row */}
         {secondaryTabs.length > 0 && (
@@ -83,7 +88,7 @@ const TabsList = React.forwardRef<
 
             <TabsPrimitive.List
               ref={scrollContainerRef}
-              className="flex items-center gap-1 overflow-x-auto rounded-md p-1 scroll-smooth bg-white flex-1 scrollbar-hide min-w-0"
+              className="flex items-center gap-1 overflow-x-auto rounded-md p-1 scroll-smooth bg-white flex-1 scrollbar-hide min-w-0 border border-gray-200"
               style={{
                 touchAction: "pan-x",
                 WebkitOverflowScrolling: "touch",
@@ -117,7 +122,7 @@ const TabsList = React.forwardRef<
       <TabsPrimitive.List
         ref={ref}
         className={cn(
-          "hidden items-center justify-center gap-1 rounded-md p-1 text-muted-foreground sm:flex bg-transparent px-[fit-content] py-[fit-content] py-[fit-content] py-0.5 opacity-100 px-0.5 w-fit h-fit",
+          "hidden items-center justify-center gap-1 rounded-md p-1 text-muted-foreground sm:flex bg-white border border-gray-200",
           className,
         )}
         {...props}
