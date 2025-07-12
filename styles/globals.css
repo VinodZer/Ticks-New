@@ -92,3 +92,35 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Improved scrollbar visibility for tab navigation */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Better tab visibility at different zoom levels */
+@media (max-width: 640px) {
+  .tab-container {
+    min-width: 0;
+    flex-shrink: 0;
+  }
+  
+  .tab-scrollable {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Ensure tabs remain clickable at 80% zoom */
+  .tab-trigger {
+    min-width: 80px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}

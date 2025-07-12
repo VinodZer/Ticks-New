@@ -83,10 +83,12 @@ const TabsList = React.forwardRef<
 
             <TabsPrimitive.List
               ref={scrollContainerRef}
-              className="flex items-center gap-1 overflow-x-auto rounded-md p-1 scroll-smooth bg-white flex-1 scrollbar-hide"
+              className="flex items-center gap-1 overflow-x-auto rounded-md p-1 scroll-smooth bg-white flex-1 scrollbar-hide min-w-0"
               style={{
                 touchAction: "pan-x",
                 WebkitOverflowScrolling: "touch",
+                scrollbarWidth: "thin",
+                scrollbarColor: "#cbd5e1 transparent",
               }}
             >
               {secondaryTabs}
